@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 
 std::string prompt(std::string ask) {
   std::string res;
@@ -12,6 +13,15 @@ int main() {
   std::string age = prompt("Age? ");
   std::string uname = prompt("Username? ");
   
-  std::cout << "\nYour name is " << name << ", you are " << age <<
-    " years old, and your username is " << uname << ".\n";
+  std::string outs = "Your name is " + name + ", you are " + age +
+    " years old, and your username is " + uname + ".\n";
+
+
+  std::cout << outs; 
+  std::ofstream f("out.log", std::ios_base::app);
+  if (!f) {
+    std::cerr << "error opening file";
+    return 1;
+  }
+  f << outs;
 }
