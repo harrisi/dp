@@ -1,3 +1,4 @@
+#!/usr/local/bin/racket
 #lang racket
 
 (define (start)

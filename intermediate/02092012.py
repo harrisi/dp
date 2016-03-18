@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from pprint import pprint
 # global list of events
 events = []
