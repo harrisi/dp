@@ -1,0 +1,1 @@
+("mass?" prompt "acceleration?" prompt * number->string "force is " ++ out)
